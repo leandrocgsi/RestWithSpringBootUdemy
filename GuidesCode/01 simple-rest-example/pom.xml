@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>br.com.erudio</groupId>
+	<artifactId>simple-rest-example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<!-- Adicionando o Spring Boot ao projeto -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.3.3.RELEASE</version>
+    </parent>
+    
+    <!-- Adicionando a dependencia do Spring Boot Starter Web -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+	<!-- Configurando a versão do Java -->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    
+    <!-- Configurando o processo de build da aplicação -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <!-- Adicionando o repositório do Spring de onde o Maven irá baixar as dependências -->
+    <repositories>
+        <repository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </repository>
+    </repositories>
+    
+    <!-- Adicionando o repositório do Spring de onde o Maven irá baixar os plugins -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </pluginRepository>
+    </pluginRepositories>
+	
+</project>
