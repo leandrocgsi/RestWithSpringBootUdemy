@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MathController {
 	
-	@RequestMapping(value="/sum/numberOne/numberTwo", method=RequestMethod.GET)
+	@RequestMapping(value="/sum/{numberOne}/{numberTwo}", method=RequestMethod.GET)
 	public Double sum(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
 		if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
 			throw new Exception();
@@ -27,7 +27,7 @@ public class MathController {
 	private boolean isNumeric(String strNumber) {
 		if (strNumber == null) return false;
 		String number = strNumber.replaceAll(",", ".");
-		return number.matches("[-+]?[0-9]*\\\\.?[0-9]+");
+		return number.matches("[-+]?[0-9]*\\.?[0-9]+");
 	}
 
 }
