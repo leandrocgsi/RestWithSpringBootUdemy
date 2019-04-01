@@ -38,7 +38,12 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>   
+        </dependency> 
+        
+        <dependency>
+		   <groupId>org.flywaydb</groupId>
+		   <artifactId>flyway-core</artifactId>
+		</dependency>  
         
         <dependency>
 		    <groupId>com.github.dozermapper</groupId>
@@ -58,6 +63,29 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<configuration>
+					<url>jdbc:mysql://localhost:3306/rest_with_spring_boot_udemy?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
+					<user>root</user>
+					<password>admin123</password>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>${mysql.version}</version>
+						<exclusions>
+							<exclusion>
+								<artifactId>slf4j-api</artifactId>
+								<groupId>org.slf4j</groupId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+				</dependencies>
+			</plugin>			
   		</plugins>
   </build>
 </project>
