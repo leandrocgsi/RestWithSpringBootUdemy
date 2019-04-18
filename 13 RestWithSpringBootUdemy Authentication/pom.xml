@@ -89,6 +89,19 @@
 			<version>2.9.2</version>
 		</dependency>
         
+        <!-- for Security support -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<!-- for Tokens support -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+        
         <!-- for Unit Tests support -->
         <dependency>
           <groupId>junit</groupId>
