@@ -19,7 +19,12 @@
 								"header": [
 									{
 										"key": "Accept",
-										"value": "application/xml, application/json, application/x-yaml"
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -27,12 +32,10 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/book/v1",
-									"protocol": "http",
+									"raw": "{{host}}/api/book/v1",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"book",
@@ -49,11 +52,16 @@
 								"header": [
 									{
 										"key": "Accept",
-										"value": "application/xml, application/json, application/x-yaml"
+										"value": "{{content_accept}}"
 									},
 									{
 										"key": "Content-Type",
-										"value": "application/xml"
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -61,12 +69,10 @@
 									"raw": "book"
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/book/v1",
-									"protocol": "http",
+									"raw": "{{host}}/api/book/v1",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"book",
@@ -83,11 +89,16 @@
 								"header": [
 									{
 										"key": "Accept",
-										"value": "application/xml, application/json, application/x-yaml"
+										"value": "{{content_accept}}"
 									},
 									{
 										"key": "Content-Type",
-										"value": "application/xml"
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -95,12 +106,10 @@
 									"raw": "book"
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/book/v1",
-									"protocol": "http",
+									"raw": "{{host}}/api/book/v1",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"book",
@@ -117,7 +126,12 @@
 								"header": [
 									{
 										"key": "Accept",
-										"value": "application/xml, application/json, application/x-yaml"
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -125,12 +139,10 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/book/v1/:id",
-									"protocol": "http",
+									"raw": "{{host}}/api/book/v1/:id",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"book",
@@ -155,16 +167,19 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {},
 								"url": {
-									"raw": "http://localhost:8080/api/book/v1/:id",
-									"protocol": "http",
+									"raw": "{{host}}/api/book/v1/:id",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"book",
@@ -194,7 +209,12 @@
 								"header": [
 									{
 										"key": "Accept",
-										"value": "application/xml, application/json, application/x-yaml"
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -202,12 +222,10 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/person/v1",
-									"protocol": "http",
+									"raw": "{{host}}/api/person/v1",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"person",
@@ -224,11 +242,16 @@
 								"header": [
 									{
 										"key": "Accept",
-										"value": "application/xml, application/json, application/x-yaml"
+										"value": "{{content_accept}}"
 									},
 									{
 										"key": "Content-Type",
-										"value": "application/xml"
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -236,12 +259,10 @@
 									"raw": "person"
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/person/v1",
-									"protocol": "http",
+									"raw": "{{host}}/api/person/v1",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"person",
@@ -258,11 +279,16 @@
 								"header": [
 									{
 										"key": "Accept",
-										"value": "application/xml, application/json, application/x-yaml"
+										"value": "{{content_accept}}"
 									},
 									{
 										"key": "Content-Type",
-										"value": "application/xml"
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -270,12 +296,10 @@
 									"raw": "person"
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/person/v1",
-									"protocol": "http",
+									"raw": "{{host}}/api/person/v1",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"person",
@@ -292,7 +316,12 @@
 								"header": [
 									{
 										"key": "Accept",
-										"value": "application/xml, application/json, application/x-yaml"
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -300,12 +329,10 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/person/v1/:id",
-									"protocol": "http",
+									"raw": "{{host}}/api/person/v1/:id",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"person",
@@ -330,16 +357,19 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
 									}
 								],
 								"body": {},
 								"url": {
-									"raw": "http://localhost:8080/api/person/v1/:id",
-									"protocol": "http",
+									"raw": "{{host}}/api/person/v1/:id",
 									"host": [
-										"localhost"
+										"{{host}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"person",
@@ -351,6 +381,60 @@
 											"key": "id",
 											"value": "{{id}}"
 										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "Authenticate an user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "18ebe176-0e3d-4fe1-8927-d7dbb96d5dfd",
+										"exec": [
+											"if (responseCode.code >= 200 && responseCode.code <= 299) {",
+											"    var jsonData = JSON.parse(responseBody);",
+											"    postman.setEnvironmentVariable('bearer_token', jsonData.token);",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"{{user}}\",\n\t\"password\":\"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"signin"
 									]
 								}
 							},
