@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import br.com.erudio.exception.InvalidJwtAuthenticationException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
@@ -27,14 +28,14 @@ public class JwtTokenProvider {
 	@Value("${security.jwt.token.secret-key:secret}")
 	private String secretKey = "secret";
 	
-	@Value("${security.jwt.token.expire-lenght:3600000}")
+	@Value("${security.jwt.token.expire-length:3600000}")
 	private long validityInMilliseconds = 3600000; //1h
 	
 	@Autowired
 	private UserDetailsService userDetailsService;
 	
 	@PostConstruct
-	public void init() {
+	protected void init() {
 		secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
 	}
 	
@@ -63,7 +64,7 @@ public class JwtTokenProvider {
 	}
 	
 	public String resolveToken(HttpServletRequest req) {
-		String bearerToken = req.getHeader("Athorization");
+		String bearerToken = req.getHeader("Authorization");
 		if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
 			return bearerToken.substring(7, bearerToken.length());
 		}		
@@ -77,7 +78,7 @@ public class JwtTokenProvider {
 				return false;
 			}
 			return true;
-		} catch (Exception e) {
+		} catch (JwtException | IllegalArgumentException e) {
 			throw new InvalidJwtAuthenticationException("Expired or invalid JWT token");
 		}
 	}
