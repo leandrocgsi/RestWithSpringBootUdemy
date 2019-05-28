@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5f8013b2-38a8-4bed-8fcd-e439fda18f2d",
+		"_postman_id": "2b24c357-27b0-42e0-887c-cc89c7a53d73",
 		"name": "RESTful API With Spring Boot 2.1.3",
 		"description": "Some description about your API.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -27,10 +27,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{host}}/api/book/v1",
 									"host": [
@@ -134,10 +130,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{host}}/api/book/v1/:id",
 									"host": [
@@ -174,7 +166,6 @@
 										"type": "text"
 									}
 								],
-								"body": {},
 								"url": {
 									"raw": "{{host}}/api/book/v1/:id",
 									"host": [
@@ -217,12 +208,8 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
-									"raw": "{{host}}/api/person/v1",
+									"raw": "{{host}}/api/person/v1?page=0&limit=5&direction=asc",
 									"host": [
 										"{{host}}"
 									],
@@ -230,6 +217,65 @@
 										"api",
 										"person",
 										"v1"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "direction",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find all people with token name",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{bearer_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/person/v1/findPersonByName/bra?page=0&limit=5&direction=asc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1",
+										"findPersonByName",
+										"bra"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "direction",
+											"value": "asc"
+										}
 									]
 								}
 							},
@@ -324,10 +370,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{host}}/api/person/v1/:id",
 									"host": [
@@ -404,7 +446,6 @@
 										"type": "text"
 									}
 								],
-								"body": {},
 								"url": {
 									"raw": "{{host}}/api/person/v1/:id",
 									"host": [
