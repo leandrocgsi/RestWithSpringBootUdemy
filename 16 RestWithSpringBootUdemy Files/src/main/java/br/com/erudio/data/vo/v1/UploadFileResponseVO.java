@@ -1,7 +1,10 @@
 package br.com.erudio.data.vo.v1;
 
+import java.io.Serializable;
 
-public class UploadFileResponseVO {
+public class UploadFileResponseVO implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	
     private String fileName;
     private String fileDownloadUri;

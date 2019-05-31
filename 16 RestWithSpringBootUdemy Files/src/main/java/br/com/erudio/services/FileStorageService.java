@@ -14,9 +14,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import br.com.erudio.config.FileNotFoundException;
 import br.com.erudio.config.FileStorageConfig;
 import br.com.erudio.exception.FileStorageException;
+import br.com.erudio.exception.MyFileNotFoundException;
 
 @Service
 public class FileStorageService {
@@ -62,10 +62,10 @@ public class FileStorageService {
             if(resource.exists()) {
                 return resource;
             } else {
-                throw new FileNotFoundException("File not found " + fileName);
+                throw new MyFileNotFoundException("File not found " + fileName);
             }
         } catch (MalformedURLException ex) {
-            throw new FileNotFoundException("File not found " + fileName, ex);
+            throw new MyFileNotFoundException("File not found " + fileName, ex);
         }
     }
 }
