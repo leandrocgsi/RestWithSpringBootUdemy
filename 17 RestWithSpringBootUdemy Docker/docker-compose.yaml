@@ -28,8 +28,8 @@ services:
     volumes:
       - ./app:/app
       - ~/.m2:/root/.m2
-    expose:
-      - "8080"
+    ports:
+      - "8080:8080"
     command: mvn clean spring-boot:run
     links:
       - db
