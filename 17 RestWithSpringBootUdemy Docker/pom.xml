@@ -51,13 +51,11 @@
         </dependency> 
         
         <!-- for Migrations support -->
-        <!--
-		<dependency>
+        <dependency>
 		   <groupId>org.flywaydb</groupId>
 		   <artifactId>flyway-core</artifactId>
 		</dependency>  
-        -->
-		
+        
         <!-- for Model Mapper support -->
         <dependency>
 		    <groupId>com.github.dozermapper</groupId>
@@ -118,7 +116,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			
-			<!--
 			<plugin>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
@@ -140,8 +137,7 @@
 						</exclusions>
 					</dependency>
 				</dependencies>
-			</plugin>
-			-->			
+			</plugin>			
   		</plugins>
   </build>
 </project>
