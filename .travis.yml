@@ -8,7 +8,7 @@ script:
 before_deploy:
   - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
 deploy:
-  provider:script
+  provider: script
   script:
     docker push leandrocgsi/mysql-rest-with-spring-boot-udemy;
     docker push leandrocgsi/rest-with-spring-boot-udemy;
