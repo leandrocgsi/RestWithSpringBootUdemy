@@ -1,0 +1,42 @@
+version: '3.4'
+services:
+  db:
+    image: leandrocgsi/mysql-rest-with-spring-boot-udemy
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      TZ: America/Sao_Paulo
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_DATABASE: rest_with_spring_boot_udemy
+    ports:
+      - "3308:3306"
+    networks:
+      - udemy-network
+  rest-with-spring-boot-udemy:
+    image: leandrocgsi/rest-with-spring-boot-udemy
+    restart: always
+    build: ./RestWithSpringBootUdemy
+    working_dir: /RestWithSpringBootUdemy
+    environment:
+      TZ: America/Sao_Paulo
+      SPRING_BOOT_ENVIRONMENT: Production
+    volumes:
+      - ./RestWithSpringBootUdemy:/RestWithSpringBootUdemy
+      - ~/.m2:/root/.m2
+    ports:
+      - "8080:8080"
+    command: mvn clean spring-boot:run
+    links:
+      - db
+    depends_on:
+      - db
+    networks:
+      - udemy-network
+networks:
+    udemy-network:
+        driver: bridge
