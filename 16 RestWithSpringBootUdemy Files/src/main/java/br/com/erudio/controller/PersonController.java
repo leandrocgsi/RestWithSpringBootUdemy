@@ -37,6 +37,7 @@ public class PersonController {
 	@Autowired
 	private PersonServices service;
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@ApiOperation(value = "Find all people" ) 
 	@GetMapping(produces = { "application/json", "application/xml", "application/x-yaml" })
 	public ResponseEntity<PagedResources<PersonVO>> findAll(
