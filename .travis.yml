@@ -20,7 +20,7 @@ deploy:
     docker push leandrocgsi/rest-with-spring-boot-udemy;
   on:
     branch: master
-after_sucess:
+after_success:
   - pip install --user awscli
   - export PATH=$PATH:/$HOME/.local/bin
   - eval $(aws ecr get-login --no-include-email --region us-east-2)
