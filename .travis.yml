@@ -2,6 +2,7 @@ sudo: required
 language: java
 jdk:
   - oraclejdk11
+python: 3.6
 services: docker
 before_install:
   - sudo apt-get update
@@ -28,11 +29,7 @@ after_success:
   # - sudo add-apt-repository ppa:jonathonf/python-3.6
   # - sudo apt-get update
   # - sudo apt-get install python3.6
-  - echo "${python -c \"import sys; print('UCS4/UTF-32: mu-manylinux1' if sys.maxunicode > 65535 else 'UCS2/UTF-16: m-manylinux1')\"}"
-  - mkdir ~/wheels_dir
-  - source bin/activate
-  - pip install --no-index ~/wheels_dir/pip-19.0.1-py2.py3-none-any.whl
-  - pip install awscli --upgrade
+  - pip3 install awscli --upgrade --user
   - export PATH=$PATH:/$HOME/.local/bin
   - add-apt-repository ppa:eugenesan/ppa
   - apt-get update
