@@ -23,6 +23,9 @@ deploy:
     branch: master
 after_success:
   # - sudo pip install pyOpenSSL cryptography idna certifi
+  - sudo add-apt-repository ppa:jonathonf/python-3.6
+  - sudo apt-get update
+  - sudo apt-get install python3.6
   - pip3 install awscli --upgrade --user
   - export PATH=$PATH:/$HOME/.local/bin
   - add-apt-repository ppa:eugenesan/ppa
