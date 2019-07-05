@@ -22,7 +22,7 @@ deploy:
     branch: master
 after_success:
   # - sudo pip install pyOpenSSL cryptography idna certifi
-  - pip3 install --user awscli  
+  - pip3 install awscli --upgrade --user
   - export PATH=$PATH:/$HOME/.local/bin
   - add-apt-repository ppa:eugenesan/ppa
   - apt-get update
