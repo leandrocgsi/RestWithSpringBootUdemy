@@ -2,11 +2,12 @@ sudo: required
 language: java
 jdk:
   - oraclejdk11
-python: 3.6
+# python: 3.6
 services: docker
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install python3.6
+  - sudo add-apt-repository ppa:jonathonf/python-3.6
+  - sudo apt update
+  - sudo apt install python3.6
   - cd 18\ RestWithSpringBootUdemy\ Deploy\ in\ AWS/RestWithSpringBootUdemy/
   - echo "Let's strat Maven Package!"
   - mvn clean package
