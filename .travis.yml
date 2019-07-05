@@ -22,8 +22,7 @@ deploy:
     branch: master
 after_success:
   - sudo apt-get install python2.7
-  - pip install pyOpenSSL ndg-httpsclient pyasn1
- # - pip install --user awscli
+  - pip install --user awscli
   - export PATH=$PATH:/$HOME/.local/bin
   - add-apt-repository ppa:eugenesan/ppa
   - apt-get update
