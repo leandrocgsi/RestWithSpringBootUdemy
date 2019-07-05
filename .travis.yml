@@ -29,7 +29,7 @@ after_success:
   # - sudo add-apt-repository ppa:jonathonf/python-3.6
   # - sudo apt-get update
   # - sudo apt-get install python3.6
-  - pip3 install awscli --upgrade --user
+  - pip install --user awscli
   - export PATH=$PATH:/$HOME/.local/bin
   - add-apt-repository ppa:eugenesan/ppa
   - apt-get update
