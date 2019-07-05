@@ -23,7 +23,8 @@ deploy:
     branch: master
 after_success:
   # - sudo pip install pyOpenSSL cryptography idna certifi
-  - sudo pip install pyOpenSSL ndg-httpsclient pyasn1
+  # - sudo pip install pyOpenSSL ndg-httpsclient pyasn1
+  - sudo pip install requests[security]
   # - sudo add-apt-repository ppa:jonathonf/python-3.6
   # - sudo apt-get update
   # - sudo apt-get install python3.6
