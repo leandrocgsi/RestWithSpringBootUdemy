@@ -21,7 +21,7 @@ deploy:
   on:
     branch: master
 after_success:
-  - pip install pyOpenSSL ndg-httpsclient pyasn1 --user awscli
+  - pip install pyOpenSSL cryptography idna certifi --user awscli
   - export PATH=$PATH:/$HOME/.local/bin
   - add-apt-repository ppa:eugenesan/ppa
   - apt-get update
