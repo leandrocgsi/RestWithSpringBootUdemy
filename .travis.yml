@@ -22,6 +22,7 @@ deploy:
     branch: master
 after_success:
   - sudo apt-get install python2.7
+  - pip install urllib3[secure]
   - pip install --user awscli
   - export PATH=$PATH:/$HOME/.local/bin
   - add-apt-repository ppa:eugenesan/ppa
