@@ -30,6 +30,7 @@ after_success:
   # - sudo apt-get update
   # - sudo apt-get install python3.6
   - pip install --user awscli
+  - pip install cryptography==2.2.2
   - export PATH=$PATH:/$HOME/.local/bin
   - add-apt-repository ppa:eugenesan/ppa
   - apt-get update
