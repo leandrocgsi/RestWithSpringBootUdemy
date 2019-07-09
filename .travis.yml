@@ -1,5 +1,6 @@
-language: bash
-services: docker
+language: java
+jdk:
+  - oraclejdk11
 before_install:
   - sudo apt-get update
   - cd 18\ RestWithSpringBootUdemy\ Deploy\ in\ AWS/RestWithSpringBootUdemy/
