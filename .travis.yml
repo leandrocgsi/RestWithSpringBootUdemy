@@ -1,7 +1,11 @@
 language: bash
 services: docker
 before_install:
+  - sudo apt-get update
   - cd 18\ RestWithSpringBootUdemy\ Deploy\ in\ AWS/RestWithSpringBootUdemy/
+  - echo "Let's start Maven Package!"
+  - mvn clean package
+  - cd ..
   - echo "We are in the Docker folder!"
 script:
   - docker-compose build
