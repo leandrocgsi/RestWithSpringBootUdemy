@@ -7,7 +7,7 @@ before_install:
   - echo "Let's start Maven Package!"
   - mvn clean package
   - cd ..
-  - echo "We are in the Docker folder!"
+  - echo "We are in the Docker folder!!!"
 script:
   - docker-compose build
 before_deploy:
