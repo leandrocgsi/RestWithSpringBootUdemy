@@ -3,7 +3,7 @@ jdk:
   - oraclejdk11
 before_install:
   - sudo apt-get update
-  - cd 19\ RestWithSpringBootUdemy\ CI\ na\ AWS\ com\ o\ Travis\ CI/
+  - cd 19\ RestWithSpringBootUdemy\ CI\ na\ AWS\ com\ o\ Travis\ CI/RestWithSpringBootUdemy/
   - echo "Let's start Maven Package!"
   - mvn clean package
   - cd ..
