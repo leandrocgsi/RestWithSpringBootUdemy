@@ -1,0 +1,37 @@
+language: java
+jdk:
+  - oraclejdk11
+services: docker
+before_install:
+  - sudo apt-get update
+  - cd 18\ RestWithSpringBootUdemy\ Deploy\ in\ AWS/RestWithSpringBootUdemy/
+  - echo "Let's strat Maven Package!"
+  - mvn clean package
+  - cd ..
+  - echo "We are in the Docker folder!"
+script:
+  - echo "OK Here we GO!"
+  - docker-compose build
+before_deploy:
+  - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
+deploy:
+  provider: script
+  script:
+    docker push leandrocgsi/rest-with-spring-boot-udemy;
+  on:
+    branch: master
+after_success:
+  - pip install --user awscli
+  - export PATH=$PATH:/$HOME/.local/bin
+  - add-apt-repository ppa:eugenesan/ppa
+  - apt-get update
+  - apt-get install jq -y
+  - curl https://raw.githubusercontent.com/silinternational/ecs-deploy/master/ecs-deploy | sudo tee -a /usr/bin/ecs-deploy
+  - sudo chmod +x /usr/bin/ecs-deploy
+  - eval $(aws ecr get-login --no-include-email --region us-east-2)
+  - docker tag leandrocgsi/rest-with-spring-boot-udemy:latest $AWS_REPO:latest
+  - echo "Deploy to AWS are Started!" 
+  - docker push $AWS_REPO:latest
+  - ecs-deploy -c $CLUSTER_NAME -n $SERVICE_NAME -i $AWS_REPO:latest  
+notifications:
+  email: false

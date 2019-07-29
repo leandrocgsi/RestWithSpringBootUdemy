@@ -1,5 +1,10 @@
 *.class
 
+# SSH Keys
+
+*.pem
+*.ppk
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -15,6 +20,7 @@ target/
 **/.project
 **/.classpath
 **/.settings/
+/bin/
 blog/bin/
 **/.tern-project
 
