@@ -1,6 +1,11 @@
+sudo: required
+dist: bionic
 language: java
 jdk:
   - oraclejdk11
+python:
+  - "3.6"
+services: docker
 before_install:
   - sudo apt-get update
   - cd 19\ RestWithSpringBootUdemy\ CI\ na\ AWS\ com\ o\ Travis\ CI/RestWithSpringBootUdemy/
@@ -9,6 +14,7 @@ before_install:
   - cd ..
   - echo "We are in the Docker folder!!!"
 script:
+  - echo "OK Here we GO!"
   - docker-compose build
 before_deploy:
   - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
@@ -16,7 +22,7 @@ deploy:
   provider: script
   script:
     docker tag rest-with-spring-boot-udemy:latest leandrocgsi/rest-with-spring-boot-udemy:$TRAVIS_JOB_ID;
-    docker push leandrocgsi/rest-with-spring-boot-udemy;
+    docker push leandrocgsi/rest-with-spring-boot-udemy:$TRAVIS_JOB_ID;
   on:
     branch: master
 after_success:
@@ -32,14 +38,12 @@ after_success:
   - eval $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
   - docker tag rest-with-spring-boot-udemy:latest $IMAGE_REPO_URL:$TRAVIS_JOB_ID
   - docker push $IMAGE_REPO_URL:$TRAVIS_JOB_ID
-
   - add-apt-repository ppa:eugenesan/ppa
   - apt-get update
   - apt-get install jq -y
   - curl https://raw.githubusercontent.com/silinternational/ecs-deploy/master/ecs-deploy | sudo tee -a /usr/bin/ecs-deploy
   - sudo chmod +x /usr/bin/ecs-deploy
-  - echo "AWS ECS-Deploy Setup is Configured!"
-  
+  - echo "AWS ECS-Deploy Setup is Configured"
   - ecs-deploy -c $CLUSTER_NAME -n $SERVICE_NAME -i $IMAGE_REPO_URL:$TRAVIS_JOB_ID -r $AWS_DEFAULT_REGION -t 240
 notifications:
   email: false
