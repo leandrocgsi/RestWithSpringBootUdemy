@@ -1,5 +1,7 @@
 # HTTP Status Codes adopted by the world's most famous API's
 
+Essa lista se baseia [nesse repositório aqui!](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
+
 |API                   | Status Codes                                                                             |
 |----------------------|------------------------------------------------------------------------------------------|
 |[Twitter][tw]         | 200, 304, 400, 401, 403, 404, 406, 410, 420, 422, 429, 500, 502, 503, 504                |
