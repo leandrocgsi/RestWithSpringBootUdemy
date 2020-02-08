@@ -1,6 +1,6 @@
 # HTTP Status Codes adopted by the world's most famous API's
 
-Essa lista se baseia [nesse repositório aqui!](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
+This list is based [on this repository here!](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
 
 |API                   | Status Codes                                                                             |
 |----------------------|------------------------------------------------------------------------------------------|
