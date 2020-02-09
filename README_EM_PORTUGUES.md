@@ -32,7 +32,7 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 # HTTP Status Codes adotados pelas API's mais famosas do mundo
 
-This list is based [on this repository here!](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
+Essa lista se baseia [nesse repositório aqui!](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
 
 |API                   | Status Codes                                                                             |
 |----------------------|------------------------------------------------------------------------------------------|
