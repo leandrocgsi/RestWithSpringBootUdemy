@@ -1,5 +1,8 @@
 *.class
 
+
+/node_modules
+
 # SSH Keys
 
 *.pem
