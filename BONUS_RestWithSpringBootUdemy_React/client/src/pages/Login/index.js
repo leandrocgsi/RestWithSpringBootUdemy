@@ -30,7 +30,7 @@ export default function Login() {
 
             history.push('/books')
         } catch (err) {
-            alert('Login failed! Try agains!');
+            alert('Login failed! Try again!');
         }
     };
 
