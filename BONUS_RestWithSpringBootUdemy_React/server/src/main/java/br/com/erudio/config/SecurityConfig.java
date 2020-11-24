@@ -41,7 +41,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.antMatchers("/api/**").authenticated()
 				.antMatchers("/users").denyAll()
 			.and()
+			.cors()
+			.and()
 			.apply(new JwtConfigurer(tokenProvider));
 	}
-
+	
 }
