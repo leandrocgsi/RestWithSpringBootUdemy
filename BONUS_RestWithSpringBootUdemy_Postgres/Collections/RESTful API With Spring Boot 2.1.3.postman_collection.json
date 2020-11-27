@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "2b24c357-27b0-42e0-887c-cc89c7a53d73",
+		"name": "RESTful API With Spring Boot 2.1.3",
+		"description": "Some description about your API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "Find all books",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/book/v1?page=0&limit=5&direction=asc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"book",
+										"v1"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "direction",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific book",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "book"
+								},
+								"url": {
+									"raw": "{{host}}/api/book/v1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"book",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new book",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "book"
+								},
+								"url": {
+									"raw": "{{host}}/api/book/v1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"book",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find a specific book by your ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/book/v1/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"book",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specific book by your ID",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/book/v1/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"book",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Person",
+					"item": [
+						{
+							"name": "Find all people",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/person/v1?page=0&limit=5&direction=asc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "direction",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find all people with token name",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{bearer_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/person/v1/findPersonByName/bra?page=0&limit=5&direction=asc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1",
+										"findPersonByName",
+										"bra"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "direction",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific person",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "person"
+								},
+								"url": {
+									"raw": "{{host}}/api/person/v1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new person",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "person"
+								},
+								"url": {
+									"raw": "{{host}}/api/person/v1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find a specific person by your ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/person/v1/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Disable a specific person by your ID",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{host}}/api/person/v1/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specific person by your ID",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearer_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/person/v1/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "Authenticate an user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "18ebe176-0e3d-4fe1-8927-d7dbb96d5dfd",
+										"exec": [
+											"if (responseCode.code >= 200 && responseCode.code <= 299) {",
+											"    var jsonData = JSON.parse(responseBody);",
+											"    postman.setEnvironmentVariable('bearer_token', jsonData.token);",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"{{user}}\",\n\t\"password\":\"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "File",
+					"item": [
+						{
+							"name": "Upload a file",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{bearer_token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/leand/Desktop/TestUpload/03 - Breaking the Law.mp3",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/file/v1/uploadFile",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"file",
+										"v1",
+										"uploadFile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload multiple files",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content_type}}"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{bearer_token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/leand/Desktop/TestUpload/03 - Breaking the Law.mp3"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/file/v1/uploadMultipleFiles",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"file",
+										"v1",
+										"uploadMultipleFiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Download a file",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{content_accept}}"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{bearer_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/file/v1/downloadFile/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"file",
+										"v1",
+										"downloadFile",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "Folder for api"
+		}
+	]
+}
