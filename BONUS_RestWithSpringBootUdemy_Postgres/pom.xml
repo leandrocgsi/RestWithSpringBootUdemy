@@ -44,10 +44,11 @@
 			<artifactId>spring-hateoas</artifactId>
 		</dependency>
 		
-		<!-- for MySQL support -->
+		<!-- for Postgres SQL support -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.18</version>
         </dependency> 
         
         <!-- for Migrations support -->
@@ -120,8 +121,8 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<configuration>
-					<url>jdbc:mysql://localhost:3306/rest_with_spring_boot_udemy?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
-					<user>root</user>
+					<url>jdbc:postgresql://localhost:5432/rest_with_spring_boot_udemy</url>
+					<user>postgres</user>
 					<password>admin123</password>
 				</configuration>
 				<dependencies>

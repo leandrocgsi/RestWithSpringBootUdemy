@@ -44,10 +44,10 @@
 			<artifactId>spring-hateoas</artifactId>
 		</dependency>
 		
-		<!-- for MySQL support -->
+		<!-- for SQL Server support -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
         </dependency> 
         
         <!-- for Migrations support -->
@@ -120,9 +120,9 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<configuration>
-					<url>jdbc:mysql://localhost:3306/rest_with_spring_boot_udemy?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
-					<user>root</user>
-					<password>admin123</password>
+					<url>jdbc:sqlserver://localhost;databaseName=rest_with_spring_boot_udemy</url>
+					<user>sa</user>
+					<password>admin123!</password>
 				</configuration>
 				<dependencies>
 					<dependency>
