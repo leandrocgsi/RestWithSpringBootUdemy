@@ -3,8 +3,6 @@
 
 [![Build Status](https://travis-ci.org/leandrocgsi/RestWithSpringBootUdemy.svg?branch=master)](https://travis-ci.org/leandrocgsi/RestWithSpringBootUdemy)
 
-# REST API's RESTFul do 0 à AWS com Spring Boot 2.x e Docker
-
 [![Image](https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/rest_apis_restful_do_0_à_nuvem_com_spring_boot_2_e_docker.png?raw=true "REST API's RESTFul do 0 à Nuvem Com Spring Boot 2.x e Docker")](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2019)
 
 Este é o repositório dos codigos fonte desenvolvidos no curso [REST API's RESTFul do 0 à AWS com Spring Boot 2.x e Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2019)
