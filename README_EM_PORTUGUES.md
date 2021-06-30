@@ -82,4 +82,4 @@ Usado por **todos eles**: 200, 400
 [pk]: https://getpocket.com/developer/docs/errors
 [ub]: https://developer.uber.com/v1/api-reference/
 
-[<img src="https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/udemy.png?raw=true">](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2019)
+[<img src="https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/udemy.png?raw=true">](https://www.udemy.com/course/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2021)
