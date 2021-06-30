@@ -6,7 +6,7 @@
 
 [![Image](https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/rest_apis_restful_from_0_to_aws_with_spring_boot_and_docker.png?raw=true "REST API's RESTFul from 0 to AWS with Spring Boot and Docker")](https://www.udemy.com/course/rest-apis-restful-from-0-to-aws-with-spring-boot-and-docker/?couponCode=GTHB_FLASH_SALE2021)
 
-This is the repository of the source codes developed in the course [REST API's RESTFul from 0 to AWS with Spring Boot and Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2019)
+This is the repository of the source codes developed in the course [REST API's RESTFul from 0 to AWS with Spring Boot and Docker](https://www.udemy.com/course/rest-apis-restful-from-0-to-aws-with-spring-boot-and-docker/?couponCode=GTHB_FLASH_SALE2021)
 
 # Related Courses
 
